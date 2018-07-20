@@ -1,5 +1,6 @@
 ## Introduction
-- add timestemp query to tags'[script, style, link] attribute src in html, to refresh cache.
+- quick start for web project
+- collect urban frameworks
 
 ## todo
 - install package
@@ -27,3 +28,4 @@ Usage: index [options] <name>
 ```
 
 ### Example
+- todo
