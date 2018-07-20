@@ -6,17 +6,17 @@
 - [x] install package `execa`
 - [ ] user select type `inquirer`
 - [x] add chalk logs
-- [ ] publish to npm
+- [x] publish to npm
 - add unit test
 
 ## Installation
 ```
-$ npm install -g webuc-cli
+$ npm i -g git+http://git.jd.com/web-uc/web-cli.git
 ```
 
 ## Usage
 ```
-$ webuc-cli --help
+$ webcli -h
 
 Usage: index [options] <name>
 
@@ -30,4 +30,8 @@ Usage: index [options] <name>
 ```
 
 ### Example
-- `webuc-cli -t vue-eslint demo`
+- `webcli -t vue-eslint demo`
+
+
+## development
+<!-- - `npm link`: link to global environment -->
