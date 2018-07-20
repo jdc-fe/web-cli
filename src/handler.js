@@ -27,6 +27,11 @@ class Handler{
     const {targetPath, projectPath, quiet } = this
     copydir(projectPath, targetPath, () => {
       this.log.info('success..')
+      // todo
+      // npm install package.json
+      // git init
+      // git add .
+      // git commit -m 'init'
       // exec(`pwd && cd ${targetPath} && npm i `, (error, stdout, stderr) => {
       //   if(error) {
       //     console.error('exec error', error)
