@@ -1,6 +1,7 @@
 .PHONY: test clean unit e2e
 
 dev:
+	rm -rf example &&\
 	node src/index.js -t vue-eslint example
 
 publish:

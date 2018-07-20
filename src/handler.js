@@ -1,21 +1,20 @@
 const fs = require("fs")
 const path = require('path')
 const copydir = require('copy-dir')
-const { exec } = require('child_process')
+const execa = require('execa')
 const Log = require('./log')
-const {PROJECT_TYPES, SOURCE_PATH_PREFIX} = require('./config')
+const {PROJECT_TYPES, SOURCE_PATH_PREFIX, Logo} = require('./config')
 
 class Handler{
   constructor(name, {type, quiet}){
     this.targetPath = path.join(this.workspace, name)
-
     this.log = new Log(quiet)
 
     if(PROJECT_TYPES.indexOf(type) === -1)
       return this.log.error('invalid type')
     this.projectPath = path.join(__dirname, SOURCE_PATH_PREFIX, type)
 
-    this._handleFiles()
+    this._handleFiles(name)
   }
 
   get workspace() {
@@ -23,28 +22,25 @@ class Handler{
     return process.env.PWD || process.cwd()
   }
 
-  _handleFiles() {
+  _handleFiles(name) {
     const {targetPath, projectPath, quiet } = this
-    copydir(projectPath, targetPath, () => {
-      this.log.info('success..')
-      // todo
-      // npm install package.json
-      // git init
-      // git add .
-      // git commit -m 'init'
-      // exec(`pwd && cd ${targetPath} && npm i `, (error, stdout, stderr) => {
-      //   if(error) {
-      //     console.error('exec error', error)
-      //     return
-      //   }
+    copydir(projectPath, targetPath, async () => {
+      const opt = {stdio: 'inherit', cwd: targetPath}
 
-      //   console.info('stdout', stdout)
-      //   console.warn('stderr', stderr)
-      // })
-      // todo install package
+      await execa('git', ['init'], opt)
+      await execa('git', ['add', '-A'], opt)
+      await execa('git', ['commit', '-m', 'init'], opt)
+
+      this.log.clear()
+
+      this.log.success(`\n  Successfully created project <${name}>. \n  Open the journey with the following commands: \n`)
+      this.log.cmd(`cd ${name}`)
+      this.log.cmd(`npm i`)
+      this.log.cmd(`npm start`)
+      this.log.raw(Logo)
     })
-
   }
+
 
 }
 
