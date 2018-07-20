@@ -25,7 +25,7 @@
     "sinon": "^4.1.0"
   },
   "bin": {
-    "web-cli": "src/index.js"
+    "webcli": "src/index.js"
   },
   "keywords": [
     "quick start",
