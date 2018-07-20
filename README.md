@@ -6,6 +6,7 @@
 - [x] install package `execa`
 - [ ] user select type `inquirer`
 - [x] add chalk logs
+- [ ] publish to npm
 - add unit test
 
 ## Installation
@@ -23,10 +24,10 @@ Usage: index [options] <name>
   Options:
 
     -V, --version     output the version number
-    -t --type [type]  vue-eslint, vue-tslint default is vue-eslint
+    -t --type [type]  vue-eslint default is vue-eslint
     -q --quiet        will not print anything
     -h, --help        output usage information
 ```
 
 ### Example
-- todo
+- `webuc-cli -t vue-eslint demo`
