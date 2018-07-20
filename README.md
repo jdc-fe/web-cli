@@ -3,8 +3,9 @@
 - collect urban frameworks
 
 ## todo
-- install package
-- add chalk logs
+- [ ] install package `execa`
+- [ ] user select type `inquirer`
+- [x] add chalk logs
 - add unit test
 
 ## Installation

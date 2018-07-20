@@ -15,10 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lin-123/recache"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/lin-123/recache/issues"
   },
   "devDependencies": {
     "expect": "^21.2.1",

@@ -1,18 +1,19 @@
 const fs = require("fs")
 const path = require('path')
 const copydir = require('copy-dir')
-
-const PROJECT_TYPES = ['vue-eslint', 'vue-tslint']
-const SOURCE_PATH_PRIFEX = './projects'
+const { exec } = require('child_process')
+const Log = require('./log')
+const {PROJECT_TYPES, SOURCE_PATH_PREFIX} = require('./config')
 
 class Handler{
   constructor(name, {type, quiet}){
     this.targetPath = path.join(this.workspace, name)
 
+    this.log = new Log(quiet)
+
     if(PROJECT_TYPES.indexOf(type) === -1)
-      return console.error('invalid type')
-    this.projectPath = path.join(__dirname, SOURCE_PATH_PRIFEX, type)
-    this.quiet = quiet
+      return this.log.error('invalid type')
+    this.projectPath = path.join(__dirname, SOURCE_PATH_PREFIX, type)
 
     this._handleFiles()
   }
@@ -25,7 +26,16 @@ class Handler{
   _handleFiles() {
     const {targetPath, projectPath, quiet } = this
     copydir(projectPath, targetPath, () => {
-      console.log('success')
+      this.log.info('success..')
+      // exec(`pwd && cd ${targetPath} && npm i `, (error, stdout, stderr) => {
+      //   if(error) {
+      //     console.error('exec error', error)
+      //     return
+      //   }
+
+      //   console.info('stdout', stdout)
+      //   console.warn('stderr', stderr)
+      // })
       // todo install package
     })
 
