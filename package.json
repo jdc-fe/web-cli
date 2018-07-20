@@ -1,5 +1,5 @@
 {
-  "name": "quick-start",
+  "name": "web-cli",
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
@@ -25,7 +25,7 @@
     "sinon": "^4.1.0"
   },
   "bin": {
-    "recache": "src/index.js"
+    "web-cli": "src/index.js"
   },
   "keywords": [
     "quick start",
