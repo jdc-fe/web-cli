@@ -18,6 +18,14 @@ module.exports = {
       ignoreUrls: true,
       ignoreTemplateLiterals: true,
       ignoreRegExpLiterals: true
+    }],
+    "no-return-await": "off",
+    "comma-dangle": ["error", {
+        "arrays": "never",
+        "objects": "ignore",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
     }]
   },
   parserOptions: {

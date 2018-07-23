@@ -3,7 +3,7 @@ const path = require('path')
 const copydir = require('copy-dir')
 const execa = require('execa')
 const Log = require('./log')
-const {PROJECT_TYPES, SOURCE_PATH_PREFIX, Logo} = require('./config')
+const {PROJECT_TYPES, EXCLUDE, SOURCE_PATH_PREFIX, Logo} = require('./config')
 
 class Handler{
   constructor(name, {type, quiet}){
@@ -22,23 +22,30 @@ class Handler{
     return process.env.PWD || process.cwd()
   }
 
-  _handleFiles(name) {
+  async _handleFiles(name) {
     const {targetPath, projectPath, quiet } = this
-    copydir(projectPath, targetPath, async () => {
-      const opt = {stdio: 'inherit', cwd: targetPath}
 
-      await execa('git', ['init'], opt)
-      await execa('git', ['add', '-A'], opt)
-      await execa('git', ['commit', '-m', 'init'], opt)
+    copydir.sync(projectPath, targetPath, (stat, filepath, filename) => {
+      if(EXCLUDE[stat] && EXCLUDE[stat].indexOf(filename) !== -1) return false;
 
-      this.log.clear()
-
-      this.log.success(`\n  Successfully created project <${name}>. \n  Open the journey with the following commands: \n`)
-      this.log.cmd(`cd ${name}`)
-      this.log.cmd(`npm i`)
-      this.log.cmd(`npm start`)
-      this.log.raw(Logo)
+      return true;
+    }, (err) => {
+      this.log.error(err)
     })
+
+    const opt = {stdio: 'inherit', cwd: targetPath}
+
+    await execa('git', ['init'], opt)
+    await execa('git', ['add', '-A'], opt)
+    await execa('git', ['commit', '-m', 'init'], opt)
+
+    this.log.clear()
+
+    this.log.success(`\n  Successfully created project <${name}>. \n  Open the journey with the following commands: \n`)
+    this.log.cmd(`cd ${name}`)
+    this.log.cmd(`npm i`)
+    this.log.cmd(`npm start`)
+    this.log.raw(Logo)
   }
 
 

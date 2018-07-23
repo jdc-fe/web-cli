@@ -1,3 +1,3 @@
-import http from './adapter'
+import {icity} from './adapter'
 
-export const getPing = async () => await http.get(`${icity}/ping`)
+export const getPing = async () => await icity.get(`./ping`)
