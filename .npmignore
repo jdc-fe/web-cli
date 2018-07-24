@@ -2,4 +2,4 @@ example
 node_modules
 test
 Makefile
-
+!src/projects/**/.gitignore

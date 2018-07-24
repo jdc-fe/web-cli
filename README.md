@@ -10,6 +10,11 @@
 - [x] publish to npm
 - add unit test
 
+## note
+- [npm ignore](https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package)
+  - 如果没有 .npmignore 会使用 .gitignore， 如果都有就执行并集
+  - `npm pack` —— Testing whether your .npmignore or files config works
+
 ## Installation
 ```
 $ npm i -g git+http://git.jd.com/web-uc/web-cli.git
