@@ -3,6 +3,7 @@
 - collect urban frameworks
 
 ## todo
+- [ ] overlay eslint error
 - [x] install package `execa`
 - [ ] user select type `inquirer`
 - [x] add chalk logs
