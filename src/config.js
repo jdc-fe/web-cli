@@ -6,6 +6,9 @@ module.exports = {
     directory: ['node_modules'],
     file: ['package-lock.json']
   },
+  // fix gitignore be renamed to npmignore
+  // [from, to]
+  RENAME: ['.npmignore', '.gitignore'],
   Logo: `
 
 
