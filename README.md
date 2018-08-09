@@ -3,6 +3,10 @@
 - collect urban frameworks
 
 ## todo
+- [ ] add logger plugin
+- [ ] add folder service
+- [ ] add some utils
+- [ ] airbnb standard
 - [x] overlay eslint error
 - [x] install package `execa`
 - [ ] user select type `inquirer`

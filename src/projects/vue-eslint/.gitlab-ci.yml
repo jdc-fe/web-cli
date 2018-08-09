@@ -34,7 +34,7 @@ deploy_integration:
   stage: deploy
   script:
     - export SERVER=$SERVER_integration
-    - sh /deploy.sh
+    - bash /deploy.sh
   only:
     - vue/cli
     # - integration
