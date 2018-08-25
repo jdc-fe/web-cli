@@ -17,19 +17,31 @@ build:
   stage: build
   script:
     - npm i
+    - npm run build:test
+  artifacts:
+    name: vue-eslint-airbnb."$CI_BUILD_REF"
+    paths:
+      - dist
+    expire_in: 1 day
+  except:
+    - master
+  tags:
+    - node-8-10
+
+build_prod:
+  stage: build
+  script:
+    - npm i
     - npm run build
   artifacts:
-    name: demo-cicd."$CI_BUILD_REF"
+    name: vue-eslint-airbnb."$CI_BUILD_REF"
     paths:
       - dist
     expire_in: 1 day
   only:
-    - vue/cli
-    # - integration
-    # - master
+    - master
   tags:
     - node-8-10
-
 
 deploy_integration:
   stage: deploy

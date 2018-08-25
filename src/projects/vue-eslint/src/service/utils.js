@@ -9,12 +9,15 @@
  */
 export const throttle = (fn, delay) => {
   let clork;
-  return (...args) => {
+  return function throttleCb(...args) {
     if (clork) {
       clearTimeout(clork);
       clork = null;
       return;
     }
-    clork = setTimeout(() => fn(...args), delay);
+    clork = setTimeout(async () => {
+      await fn.call(this, ...args);
+      clork = null;
+    }, delay);
   };
-};
+}

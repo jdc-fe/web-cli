@@ -11,7 +11,8 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'prefer-default-export' : 'off',
-    "import/prefer-default-export": "off",
+    'import/prefer-default-export': "off",
+    'semi': 'off',
     'no-param-reassign': ["error", { "props": false }],
     // maximum line length
     "max-len": [1, {

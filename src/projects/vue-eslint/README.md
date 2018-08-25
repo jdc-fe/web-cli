@@ -17,6 +17,9 @@ npm install
 # serve with hot reload at localhost:8080
 npm start
 
+# build for integration with minification
+npm run build:test
+
 # build for production with minification
 npm run build
 ```
@@ -47,7 +50,9 @@ npm run build
     - App.vue
     - main.js   # 入口js
     - main.styl # 全局样式
+  - .env.[mode] # 环境变量
   - .gitlab-ci.yml # cicd 配置文件
+  - README.MD
   ```
 
 ### 命名规范， 见[vue风格指南](https://cn.vuejs.org/v2/style-guide/)
