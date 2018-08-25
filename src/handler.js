@@ -7,6 +7,7 @@ const {PROJECT_TYPES, EXCLUDE, SOURCE_PATH_PREFIX, Logo, RENAME} = require('./co
 
 class Handler{
   constructor(name, {type, quiet}){
+    if(!name) return console.log('no name....')
     this.targetPath = path.join(this.workspace, name)
     this.log = new Log(quiet)
     this.renamefiles = []

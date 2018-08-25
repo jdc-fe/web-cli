@@ -4,15 +4,16 @@
 
 ## todo
 - [ ] add logger plugin
-- [ ] add folder service
-- [ ] add some utils
-- [ ] airbnb standard
+- [ ] user select type `inquirer`
+- [ ] add unit test
+- [x] if no name; print discription
+- [x] add folder service
+- [x] add some utils
+- [x] airbnb standard
 - [x] overlay eslint error
 - [x] install package `execa`
-- [ ] user select type `inquirer`
 - [x] add chalk logs
 - [x] publish to npm
-- add unit test
 
 ## note
 - [npm ignore](https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package)
