@@ -1,4 +1,4 @@
-const env = process.env.WEB_ENV || 'integration'
+const env = process.env.WEB_ENV || 'integration';
 
 export const domains = {
   production: {
@@ -7,4 +7,4 @@ export const domains = {
   integration: {
     icity: 'http://101.124.15.81'
   }
-}[env]
+}[env];

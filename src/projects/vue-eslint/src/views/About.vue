@@ -6,18 +6,18 @@
   </div>
 </template>
 <script>
-import VClork from '@/components/VClork'
-import {getPing} from '@/api/demo'
+import VClork from '@/components/VClork';
+import { getPing } from '@/api/demo';
 
 export default {
   data: () => ({
     ping: 'ping'
   }),
   methods: {
-    async triggerPing () {
-      this.ping = await getPing()
+    async triggerPing() {
+      this.ping = await getPing();
     }
   },
-  components: {VClork}
-}
+  components: { VClork }
+};
 </script>

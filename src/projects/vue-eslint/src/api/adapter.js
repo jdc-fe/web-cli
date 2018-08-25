@@ -3,8 +3,8 @@
  * api: https://github.com/axios/axios
  */
 
-import axios from 'axios'
-import {domains} from '@/config'
+import axios from 'axios';
+import { domains } from '@/config';
 
 const icity = axios.create({
   baseURL: domains.icity,
@@ -14,12 +14,11 @@ const icity = axios.create({
   // transformResponse: [function (data) {
   //   return data
   // }],
-})
-icity.interceptors.response.use((response) => {
-  return response.data
-}, (error) => {
-  return Promise.reject(error)
-})
+});
+icity.interceptors.response.use(
+  response => response.data,
+  error => Promise.reject(error)
+);
 
 // export default axios
-export {icity}
+export { icity };

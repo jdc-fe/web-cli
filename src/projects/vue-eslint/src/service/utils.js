@@ -8,13 +8,13 @@
  *  // will print: world
  */
 export const throttle = (fn, delay) => {
-  let clork
+  let clork;
   return (...args) => {
     if (clork) {
-      clearTimeout(clork)
-      clork = null
-      return
+      clearTimeout(clork);
+      clork = null;
+      return;
     }
-    clork = setTimeout(() => fn(...args), delay)
-  }
-}
+    clork = setTimeout(() => fn(...args), delay);
+  };
+};
