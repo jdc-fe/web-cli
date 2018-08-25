@@ -3,7 +3,7 @@
 - collect urban frameworks
 
 ## todo
-- [ ] add logger plugin
+- [x] add logger plugin
 - [ ] user select type `inquirer`
 - [ ] add unit test
 - [x] if no name; print discription

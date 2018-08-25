@@ -1,21 +1,21 @@
-import Vue from 'vue';
-import './main.styl';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import { getPing } from './api/demo';
+import Vue from 'vue'
+import Logger from '@/plugins/logger'
+import App from './App.vue'
+import router from './router'
+import store from './store'
 
-Vue.config.productionTip = false;
+Vue.use(Logger, { debug: false })
+Vue.config.productionTip = false
 
+Vue.$log.info('vue-eslint launch...')
 new Vue({
   router,
   store,
   render: h => h(App),
   async mounted() {
-    // eslint-disable-next-line no-console
-    console.log('get ping: ', await getPing());
+    this.$log.info('vue-eslint ready...')
     setInterval(() => {
-      this.$store.commit('SYNC_CURRENT_TIME');
-    }, 1000);
+      this.$store.commit('SYNC_CURRENT_TIME')
+    }, 1000)
   }
-}).$mount('#app');
+}).$mount('#app')

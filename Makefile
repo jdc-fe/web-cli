@@ -2,7 +2,7 @@
 
 dev:
 	rm -rf example &&\
-	node src/index.js -t vue-eslint
+	node src/index.js -t vue-eslint example
 
 publish:
 	npm publish
