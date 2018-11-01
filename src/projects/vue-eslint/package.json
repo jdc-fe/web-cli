@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm run serve",
     "serve": "vue-cli-service serve",
-    "build:test": "vue-cli-service build --mode integration",
+    "build:test": "vue-cli-service build --mode integration --report",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

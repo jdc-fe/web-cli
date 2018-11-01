@@ -3,6 +3,14 @@
 ## introduction
 - 城市计算前端开发框架 —— vue
 
+### 网址
+> 开发|测试 环境下的 `report.html` 为依赖检查清单
+- 开发环境 `http://dev-uc.urban-computing/path/to/project`
+- 测试环境 `http://test-uc.urban-computing/path/to/project`
+- 预发布环境 `http://staging-uc.urban-computing/path/to/project`
+- 生产环境 `http://urban-computing/path/to/project`
+
+
 ## TODO LIST
 - 1
 - 2
