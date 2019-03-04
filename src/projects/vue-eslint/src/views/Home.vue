@@ -7,5 +7,4 @@
   </div>
 </template>
 
-<script src='./Home.js'>
-</script>
+<script src='./Home.js'></script>

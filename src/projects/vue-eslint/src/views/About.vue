@@ -6,8 +6,8 @@
   </div>
 </template>
 <script>
-import { getPing } from '@/api/demo'
-import VClork from '@/components/VClork'
+import { getPing } from '@/api/demo';
+import VClork from '@/components/VClork';
 
 export default {
   data: () => ({
@@ -15,9 +15,9 @@ export default {
   }),
   methods: {
     async triggerPing() {
-      this.ping = await getPing()
+      this.ping = await getPing();
     }
   },
   components: { VClork }
-}
+};
 </script>

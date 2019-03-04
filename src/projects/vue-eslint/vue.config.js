@@ -1,4 +1,4 @@
-const { env: { BASE_URL }, VUE_CLI_SERVICE: { mode } } = process
+const { env: { BASE_URL }, VUE_CLI_SERVICE: { mode } } = process;
 
 module.exports = {
   // 修改为相对路径
@@ -11,4 +11,4 @@ module.exports = {
     port: 8080
   },
   productionSourceMap: mode !== 'production',
-}
+};
