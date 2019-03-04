@@ -1,21 +1,21 @@
-import Vue from 'vue'
-import Logger from '@/plugins/logger'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import Vue from 'vue';
+import Logger from '@/plugins/logger';
+import App from './App.vue';
+import router from './router';
+import store from './store';
 
-Vue.use(Logger, { debug: false })
-Vue.config.productionTip = false
+Vue.use(Logger, { debug: false });
+Vue.config.productionTip = false;
 
-Vue.$log.info('vue-eslint launch...')
+Vue.$log.info('vue-eslint launch...');
 new Vue({
   router,
   store,
-  render: h => h(App),
+  render(h) { return h(App); },
   async mounted() {
-    this.$log.info('vue-eslint ready...')
+    this.$log.info('vue-eslint ready...');
     setInterval(() => {
-      this.$store.commit('SYNC_CURRENT_TIME')
-    }, 1000)
+      this.$store.commit('SYNC_CURRENT_TIME');
+    }, 1000);
   }
-}).$mount('#app')
+}).$mount('#app');

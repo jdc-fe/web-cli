@@ -1,10 +1,14 @@
+const { env: { BASE_URL }, VUE_CLI_SERVICE: { mode } } = process;
+
 module.exports = {
   // 修改为相对路径
-  baseUrl: process.env.BASE_URL,
+  baseUrl: BASE_URL,
   devServer: {
     overlay: {
       warnings: true,
       errors: true
-    }
-  }
-}
+    },
+    port: 8080
+  },
+  productionSourceMap: mode !== 'production',
+};

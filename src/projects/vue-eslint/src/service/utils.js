@@ -8,16 +8,16 @@
  *  // will print: world
  */
 export const throttle = (fn, delay) => {
-  let clork
+  let clork;
   return function throttleCb(...args) {
     if (clork) {
-      clearTimeout(clork)
-      clork = null
-      return
+      clearTimeout(clork);
+      clork = null;
+      return;
     }
     clork = setTimeout(async () => {
-      await fn.call(this, ...args)
-      clork = null
-    }, delay)
-  }
-}
+      await fn.call(this, ...args);
+      clork = null;
+    }, delay);
+  };
+};
