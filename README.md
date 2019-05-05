@@ -17,7 +17,7 @@ Usage: index [options] <name>
   Options:
 
     -V, --version     output the version number
-    -t --type [type]  vue-eslint default is vue-eslint
+    -t --type [type]  vue-eslint, js-toolkit default is vue-eslint
     -q --quiet        will not print anything
     -h, --help        output usage information
 ```

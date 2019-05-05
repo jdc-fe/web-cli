@@ -1,5 +1,5 @@
 module.exports = {
-  PROJECT_TYPES: ['vue-eslint'],
+  PROJECT_TYPES: ['vue-eslint', 'js-toolkit'],
   SOURCE_PATH_PREFIX: './projects',
   LOG_PREFIX: 'web-cli',
   EXCLUDE: {
