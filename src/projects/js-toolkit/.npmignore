@@ -1,0 +1,7 @@
+**/.*
+example
+node_modules
+test
+Makefile
+public
+src
