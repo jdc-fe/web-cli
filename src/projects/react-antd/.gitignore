@@ -2,7 +2,6 @@
 .git-credentials
 node_modules
 dist
-config/dev.proxy.js
 # local env files
 .env.local
 .env.*.local
