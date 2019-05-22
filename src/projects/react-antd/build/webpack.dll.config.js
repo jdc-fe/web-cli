@@ -24,7 +24,6 @@ module.exports = {
         include: [
           resolve('/node_modules/react'),
           resolve('/node_modules/react-dom'),
-          // resolve('/node_modules/antd'),
           resolve('/node_modules/mobx-react'),
           resolve('/node_modules/mobx'),
           resolve('/node_modules/react-router'),
@@ -61,7 +60,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // new CleanWebpackPlugin(['static'], { root: path.resolve(__dirname, '..')}),
     // 文件输出到 ./build/manifest.json 中
     new webpack.DllPlugin({
       path: path.resolve(
