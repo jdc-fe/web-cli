@@ -1,6 +1,6 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
-import withAuth from './withAuth';
+import WithAuth from './WithAuth';
 import Sidebar from './Sidebar';
 import Header from './Header';
 import styles from './BasicLayout.less';
@@ -32,4 +32,4 @@ class BasicLayout extends React.Component {
   }
 }
 
-export default withAuth(BasicLayout);
+export default WithAuth(BasicLayout);

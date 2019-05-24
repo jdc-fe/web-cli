@@ -4,7 +4,7 @@ import { observer, inject } from 'mobx-react';
 import { PATHS } from 'src/router';
 import RouteWithSubRoutes from './RouteWithSubRoutes';
 
-function withAuth(RenderComponent) {
+function WithAuth(RenderComponent) {
   @inject('user')
   @observer
   class Auth extends React.Component {
@@ -42,4 +42,4 @@ function withAuth(RenderComponent) {
   return Auth;
 }
 
-export default withAuth;
+export default WithAuth;
