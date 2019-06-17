@@ -25,6 +25,30 @@ Usage: index [options] <name>
 ### Example
 - `webcli -t vue-eslint demo`
 
+## API
+
+### vue-eslint
+vue base project
+
+- 基础框架 `vue` + `vuex` + `vue-router`
+- ajax 请求 `axios`
+- 样式模板 `stylus`， 支持变量、函数，见`variable.styl`
+- 代码检查 `airbnb-base`
+
+### js-tookit
+javascript node_module package base project
+
+- 脚手架 `webpack`， 帮助编译 JavaScript 文件到 dist 里
+- 单测 `mocha` + `power-assert` + `sinon` + `nyc`
+- 代码检查 `airbnb-base`
+
+### react-antd
+react+antd base project
+
+- 基础框架 `react` + `react-router` + `mobx` + `antd`
+- ajax 请求 `axios`
+- 样式模板 `stylus`
+- 代码检查 `airbnb-base`
 
 ## development
 <!-- - `npm link`: link to global environment -->

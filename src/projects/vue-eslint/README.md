@@ -33,7 +33,7 @@ npm run build
 ```
 
 ##　开发环境：　
-- node: 8.10
+- node: 10.8
 - npm: 6.1
 - vue: 2.5
 - vue/cli: 3.0

@@ -7,4 +7,4 @@
     <router-view />
   </div>
 </template>
-<style lang="less" src='./main.less'></style>
+<style lang="stylus" src='./main.styl'></style>
