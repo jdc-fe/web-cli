@@ -15,7 +15,12 @@ export default {
   }),
   methods: {
     async triggerPing() {
-      this.ping = await getPing();
+      try {
+        this.ping = await getPing();
+      } catch (e) {
+        this.$log.error(e);
+        this.ping = 'oops!!!';
+      }
     }
   },
   components: { VClork }
