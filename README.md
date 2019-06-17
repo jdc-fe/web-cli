@@ -4,7 +4,7 @@
 
 ## Installation
 ```
-$ npm i -g git+http://git.jd.com/web-uc-weapons/web-cli.git
+$ npm i -g jdc-webcli
 ```
 
 ## Usage
