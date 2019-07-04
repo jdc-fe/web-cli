@@ -1,7 +1,8 @@
-**/.*
-example
-node_modules
-test
-Makefile
-public
+.DS_Store
+*.rdb
+*.log
+.idea
 .nyc_output
+node_modules
+docs
+dist
