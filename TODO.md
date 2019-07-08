@@ -1,8 +1,9 @@
 
 ## todo
-- [x] add logger plugin
+- [ ] 新建项目的时候，如果已有文件夹则提示无法创建
 - [ ] user select type `inquirer`
 - [ ] add unit test
+- [x] add logger plugin
 - [x] if no name; print discription
 - [x] add folder service
 - [x] add some utils
