@@ -10,7 +10,6 @@ program.arguments('<name>')
   .name(name)
   .description('web project quick start.\n  todo: add modules <vue-tslint> <react-tslint>')
   .version(version)
-  .option('-t --type [type]', `${PROJECT_TYPES.join(', ')} default is vue-eslint`, 'vue-eslint')
   .option('-q --quiet', 'will not print anything', true)
   .action(function(name) {
     projectName = name

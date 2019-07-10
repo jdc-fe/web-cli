@@ -13,7 +13,7 @@ $ npm i -g jdc-webcli
 npm i -g jdc-webcli
 
 # create base project
-node src -t vue-eslint example
+node src example
 
 # cmd help
 node src
@@ -33,13 +33,12 @@ Usage: index [options] <name>
   Options:
 
     -V, --version     output the version number
-    -t --type [type]  vue-eslint, js-toolkit default is vue-eslint
     -q --quiet        will not print anything
     -h, --help        output usage information
 ```
 
 ### Example
-- `webcli -t vue-eslint demo`
+- `webcli demo`
 
 ## API
 

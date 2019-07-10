@@ -1,7 +1,7 @@
 
 ## todo
-- [ ] 新建项目的时候，如果已有文件夹则提示无法创建
-- [ ] user select type `inquirer`
+- [x] 新建项目的时候，如果已有文件夹则提示无法创建
+- [x] user select type `inquirer`
 - [ ] add unit test
 - [x] add logger plugin
 - [x] if no name; print discription
