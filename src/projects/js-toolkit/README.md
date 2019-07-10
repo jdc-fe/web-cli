@@ -1,16 +1,22 @@
-# javascript toolkit base project
+# name of the package
+a simple, concise description of what it does. [link to demo](http://your-name.github.io/repository-name)
 
-## Usage
+![example image](public/example.jpg)
+
+## Install
 ```
 npm install -S <your project name>
 ```
 
-### Example
+## Rquirements
+- node 10.8.0
+
+### Usage
 - by es6 import
     ```javascript
-    import JSToolkit from 'js-toolkit';
+    import Animal from 'js-toolkit';
 
-    const cat = new JSToolkit({ name: 'cat' });
+    const cat = new Animal({ name: 'cat' });
     cat.say('miao miao');
     ```
 
@@ -22,26 +28,37 @@ npm install -S <your project name>
         <script type="text/javascript" src="/index.js"></script></body>
         <script>
         (function() {
-            var cat = new JSToolkit({ name: 'cat' })
+            var cat = new Animal({ name: 'cat' })
             cat.say('miao miao')
         })();
         </script>
       </body>
     </html>
     ```
+## API
 
-![example image](public/example.jpg)
+### `const animal = new Animal(options)`
+Create a new `animal` instance
+
+options
+attribute|type|description
+--|--|--
+name|string|name of animal
+
+methods
+method|returns|description
+--|--|--
+say(`<string>msg`)|none|will print `<name> say <msg>`
 
 ## Development
 - `npm start`
   - web server will open http://localhost:3000
 - `npm run build`
 
-## Envirenment
-- node `v10.8.0`
-
 ## feature list
 ### 0.1.0
 - [ ] todo feature 1
 - [ ] todo feature 2
 - [ ] todo feature 3
+
+## [Reference](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md#demo)

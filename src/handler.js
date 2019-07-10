@@ -3,19 +3,19 @@ const path = require('path')
 const copydir = require('copy-dir')
 const execa = require('execa')
 const Log = require('./log')
+const inquirer = require('inquirer');
 const {PROJECT_TYPES, EXCLUDE, SOURCE_PATH_PREFIX, Logo, RENAME} = require('./config')
+const root = path.join(__dirname, "../")
 
 class Handler{
   constructor(name, {type, quiet}){
     if(!name) return console.log('no name....')
     this.targetPath = path.join(this.workspace, name)
     this.log = new Log(quiet)
+    const judgeExistedName = this.readDirSync(path.join(root), name, this.log)
+    if(judgeExistedName) return
     this.renamefiles = []
-
-    if(PROJECT_TYPES.indexOf(type) === -1) return this.log.error('invalid type')
-    this.projectPath = path.join(__dirname, SOURCE_PATH_PREFIX, type)
-
-    this.run(name)
+    this.selectProject(name)
   }
 
   async run(name) {
@@ -23,6 +23,41 @@ class Handler{
     await this.fixRenameFiles()
     await this.initGit()
     this.success(name)
+  }
+
+  selectProject(name){
+    inquirer
+      .prompt([
+        {
+          type: 'list',
+          name: 'project',
+          message: 'What base project do you need?',
+          choices: PROJECT_TYPES,
+          filter: function(val) {
+            return val.toLowerCase();
+          }
+        }
+      ])
+      .then(answers => {
+        this.projectPath = path.join(__dirname, SOURCE_PATH_PREFIX, answers.project)
+        this.run(name)
+      });
+  }
+
+  // 新建项目的时候，如果已有文件夹则提示无法创建
+  readDirSync(path, name, log){
+    let judgeExistedName = false;
+  	var pa = fs.readdirSync(path);
+  	pa.forEach(function(ele,index){
+  		var info = fs.statSync(path+"/"+ele)
+  		if(info.isDirectory()){
+        if (ele === name) {
+          log.error(`the project name - ${name} was existed, please rename the project name!`);
+          judgeExistedName = true;
+        }
+  		}
+  	})
+    return judgeExistedName
   }
 
   get workspace() {
@@ -33,6 +68,7 @@ class Handler{
   // fix npm rename gitignore to npmignore
   async fixRenameFiles() {
     const {targetPath, projectPath, renamefiles} = this
+
     if(renamefiles.length === 0) return;
 
     const projectPathLen = projectPath.length + 1

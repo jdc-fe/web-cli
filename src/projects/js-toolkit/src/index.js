@@ -1,12 +1,12 @@
 // import { MSG } from './config';
 
 class Animal {
-  constructor({ name }) {
+  constructor({ name } = {}) {
     this.name = name;
   }
 
-  say(...args) {
-    console.log(this.name, 'say', ...args);
+  say(msg) {
+    console.log(this.name, 'say', msg);
   }
 }
 
