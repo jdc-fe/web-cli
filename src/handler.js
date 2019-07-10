@@ -14,13 +14,16 @@ class Handler{
     this.log = new Log(quiet)
     const judgeExistedName = this.readDirSync(path.join(root), name, this.log)
     if(judgeExistedName) return
+    // renamefiles = [{ to, }]
+    this.renameGitIgnore = []
     this.renamefiles = []
     this.selectProject(name)
   }
 
   async run(name) {
     await this.copyFiles(name)
-    await this.fixRenameFiles()
+    await this.fixRenameFiles(this.renameGitIgnore)
+    await this.fixRenameFiles(this.renamefiles)
     await this.initGit()
     this.success(name)
   }
@@ -66,19 +69,19 @@ class Handler{
   }
 
   // fix npm rename gitignore to npmignore
-  async fixRenameFiles() {
-    const {targetPath, projectPath, renamefiles} = this
+  async fixRenameFiles(renamefiles) {
+    const {targetPath, projectPath} = this
 
     if(renamefiles.length === 0) return;
 
     const projectPathLen = projectPath.length + 1
-    const [from, to] = RENAME
     const opt = {stdio: 'inherit', cwd: targetPath}
-    const regexp = new RegExp(`${from}$`)
-    this.renamefiles.forEach(async path => {
-      const fromPath = path.substr(projectPathLen)
-      await execa('mv', [fromPath, fromPath.replace(regexp, to)], opt)
-    })
+    await Promise.all(renamefiles.map(({ filepath, from }) => {
+      const fromPath = filepath.substr(projectPathLen)
+      const realName = RENAME[from]
+      return execa('mv', [fromPath, fromPath.replace(from, realName)], opt)
+    }))
+
   }
 
   async initGit() {
@@ -100,10 +103,13 @@ class Handler{
 
   async copyFiles() {
     const {targetPath, projectPath, renamefiles } = this
-    const [from] = RENAME
+
     await copydir.sync(projectPath, targetPath, (stat, filepath, filename) => {
       if(EXCLUDE[stat] && EXCLUDE[stat].indexOf(filename) !== -1) return false;
-      if(filename === from) renamefiles.push(filepath)
+
+      if(filename === '.npmignore') this.renameGitIgnore.push({ filepath, from: '.npmignore' })
+      else if(RENAME[filename]) renamefiles.push({ filepath, from: filename })
+
       return true;
     }, (err) => {
       this.log.error(err)

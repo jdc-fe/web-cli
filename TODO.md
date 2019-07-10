@@ -19,3 +19,7 @@
   - `npm pack` —— Testing whether your .npmignore or files config works
   - npm install 会把文件里的 .gitignore 文件变成 .npmignore 文件；通过文件重命名来fix
 - [leaflet markdown guide](https://github.com/Leaflet/Leaflet/blob/master/PLUGIN-GUIDE.md#demo)
+
+- 本地开发会有一个坑：
+  - .gitignore 在发布到 npmjs 后会变成 .npmignore, 就会导致原有的 .npmignore 文件丢失，并且 .gitignore 的文件也会被过滤掉。
+  - 所以需要将本地的 .npmignore 重名为 npmignore, 在脚本初始化项目的时候再重新命名为 .npmignore
