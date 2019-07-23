@@ -26,7 +26,7 @@ module.exports = {
       postcss: {
         // 基准大小 baseSize，需要和rem.js中相同
         // 1rem=remUnit*px
-        plugins: [px2rem({ remUnit: 192 })]
+        plugins: [px2rem({ remUnit: 100 })]
       }
     }
   },
