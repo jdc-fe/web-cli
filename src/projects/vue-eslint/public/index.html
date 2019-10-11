@@ -11,7 +11,7 @@
     const baseSize = 100
     // 设置 rem 函数
     function setRem() {
-      const scale = document.documentElement.clientWidth / 1920
+      const scale = document.documentElement.clientWidth / 375
       // 设置页面根节点字体大小
       // eslint-disable-next-line
       document.documentElement.style.fontSize = baseSize * Math.min(scale, 2) + 'px'

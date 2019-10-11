@@ -63,3 +63,7 @@ javascript node_module package base project
 - webpack: build JavaScript to dist/index.min.js
 - unit test: `mocha` + `power-assert` + `sinon` + `nyc`
 - eslint: `airbnb-base`
+
+## Feature List
+### 1.2.0
+- vue-eslint add ui convention, import element-ui

@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "npm run serve",
     "serve": "vue-cli-service serve",
+    "lint": "vue-cli-service lint",
+    "start": "npm run serve",
     "build:test": "vue-cli-service build --mode integration",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "analyze": "vue-cli-service build --report"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
+    "element-ui": "^2.4.5",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -22,10 +22,12 @@
     "@vue/cli-plugin-eslint": "^3.0.0-rc.3",
     "@vue/cli-service": "^3.0.0-rc.3",
     "@vue/eslint-config-airbnb": "^3.0.1",
-    "less": "^3.9.0",
-    "less-loader": "^4.1.0",
+    "babel-plugin-component": "^1.1.1",
+    "node-sass": "^4.12.0",
     "postcss-px2rem": "^0.3.0",
     "px2rem-loader": "^0.1.9",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-element": "^1.0.1",
     "vue-template-compiler": "^2.5.16"
   },
   "browserslist": [

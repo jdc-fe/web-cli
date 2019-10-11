@@ -1,0 +1,17 @@
+// 全局样式
+@import './variable';
+
+.mt-content { margin-top: $--gutter-content; }
+.mb-content { margin-bottom: $--gutter-content; }
+.ml-content { margin-left: $--gutter-content; }
+.mr-content { margin-right: $--gutter-content; }
+
+.mt-paragraph { margin-top: $--gutter-paragraph; }
+.mb-paragraph { margin-bottom: $--gutter-paragraph; }
+.ml-paragraph { margin-left: $--gutter-paragraph; }
+.mr-paragraph { margin-right: $--gutter-paragraph; }
+
+.mt-line { margin-top: $--gutter-line; }
+.mb-line { margin-bottom: $--gutter-line; }
+.ml-line { margin-left: $--gutter-line; }
+.mr-line { margin-right: $--gutter-line; }

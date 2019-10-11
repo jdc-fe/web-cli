@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 const px2rem = require('postcss-px2rem');
+
 const path = require('path');
 
 const { env: { BASE_URL }, VUE_CLI_SERVICE: { mode } } = process;
@@ -19,7 +20,7 @@ module.exports = {
     config.resolve.alias
       .set('@', resolve('src'))
       .set('assets', resolve('src/assets'))
-      .set('variable', resolve('src/variable.styl'))
+      .set('variable', resolve('src/theme/variable.scss'))
   ),
   css: {
     loaderOptions: {
