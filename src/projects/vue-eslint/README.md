@@ -53,6 +53,7 @@ npm run build
     - directives  # 指令集合
     - router   # vue router
     - store   # vuex
+    - theme   # 主题模块
     - views   # 视图组件
 
     - App.vue
