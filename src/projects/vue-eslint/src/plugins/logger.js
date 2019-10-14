@@ -1,21 +1,25 @@
+import Vue from 'vue';
 /**
  * usage
  *  - Vue.$log.[info|warn|error]()
  *  - vm.$log.[info|warn|error]()
  */
+
 class Logger {
   constructor(debug) {
-    ['info', 'warn'].forEach((key) => {
+    ['info', 'warn', 'error'].forEach((key) => {
+      // eslint-disable-next-line no-console
       this[key] = (...args) => (debug ? console[key](...args) : '');
     });
-    this.error = console.error;
+    // this.error = console.error;
   }
 }
 
-export default {
-  install(Vue, { debug }) {
+Vue.use({
+  install(V) {
+    const debug = process.env.NODE_ENV;
     const log = new Logger(debug);
-    Vue.$log = log;
-    Vue.prototype.$log = log;
+    V.$log = log;
+    V.prototype.$log = log;
   }
-};
+});
