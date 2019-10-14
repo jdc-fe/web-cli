@@ -17,7 +17,7 @@ class Logger {
 
 Vue.use({
   install(V) {
-    const debug = process.env.NODE_ENV;
+    const debug = process.env.NODE_ENV !== 'production';
     const log = new Logger(debug);
     V.$log = log;
     V.prototype.$log = log;
