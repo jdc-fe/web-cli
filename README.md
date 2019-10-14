@@ -65,5 +65,8 @@ javascript node_module package base project
 - eslint: `airbnb-base`
 
 ## Feature List
+### 1.2.1
+- vue-eslint: add USAGE.md
+
 ### 1.2.0
 - vue-eslint add ui convention, import element-ui

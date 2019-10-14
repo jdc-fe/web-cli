@@ -1,8 +1,14 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
     <v-clork></v-clork>
-    <div class="btn" v-track:demo="{arg1: 1}">click me</div>
+    <el-switch
+      active-text="按月付费"
+      inactive-text="按年付费">
+    </el-switch>
+    <br />
+    <el-button v-track:demo="{arg1: 1}" type="primary" round>
+      click me for track
+    </el-button>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>

@@ -1,10 +1,11 @@
+import Vue from 'vue';
 /**
  * 打点统计
  */
 export default {
   bind(el, { value: args, arg: event }) {
     el.handler = () => {
-      console.log(`statistic track: event = ${event} args =`, args);
+      Vue.$log.info(`statistic track: event = ${event} args =`, args);
     };
     el.addEventListener('click', el.handler);
 

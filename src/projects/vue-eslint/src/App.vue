@@ -7,28 +7,16 @@
         <code v-text="'<el-button>'"></code>
         below
       </p>
-
-      <el-switch
-        active-text="按月付费"
-        inactive-text="按年付费">
-      </el-switch>
-      <el-button type="primary" round>el-button</el-button>
     </div>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
-
 export default {
   name: 'app',
-  components: {
-    HelloWorld
-  }
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import 'variable';
