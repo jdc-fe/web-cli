@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import { getPing } from '@/api/demo';
+// import { getPing } from '@/api/demo';
 import VClork from '@/components/VClork';
 
 export default {
@@ -16,7 +16,7 @@ export default {
   methods: {
     async triggerPing() {
       try {
-        this.ping = await getPing();
+        // this.ping = await getPing();
       } catch (e) {
         this.$log.error(e);
         this.ping = 'oops!!!';

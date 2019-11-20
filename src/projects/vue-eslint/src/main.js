@@ -4,6 +4,10 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+console.log(process.env.NODE_ENV, '----------');
+if (process.env.NODE_ENV === 'development') import('./mock');
+
+
 Vue.use(Logger, { debug: false });
 Vue.config.productionTip = false;
 
