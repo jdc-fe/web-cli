@@ -2,7 +2,7 @@ import * as api from 'src/service/user';
 import { action, extendObservable } from 'mobx';
 // 可观察属性
 const OBSERVABLE = {
-  isLogin: false,
+  isLogin: true,
   user: ''
 };
 
