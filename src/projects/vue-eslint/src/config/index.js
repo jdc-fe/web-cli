@@ -3,3 +3,5 @@ const getDomainByEnv = key => process.env[`VUE_APP_DOMAINS_${key.toUpperCase()}`
 export const domains = {
   demo: getDomainByEnv('demo')
 };
+
+export const DEBUG = process.env.NODE_ENV === 'development';

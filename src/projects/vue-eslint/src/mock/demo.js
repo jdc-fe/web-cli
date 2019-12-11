@@ -10,10 +10,10 @@ Mock.mock(/\/mock\/users\//, mergeOk({
   "memory_usage|1-100": 94.33
 }));
 
-Random.increment()
 Mock.mock(/\/mock\/users/, after(() => {
   const list = Mock.mock({
     "list|5-10": [{
+      // "name":
       "number": "3307",
       "ip": "@ip",
       "time": '@date("yyyy-MM-dd HH:mm:ss")',

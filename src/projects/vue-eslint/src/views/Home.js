@@ -8,14 +8,22 @@ export default {
   name: 'home',
   data: () => ({
     object: {},
-    list: [],
+    pageList: {
+      list: [],
+      total: 0
+    },
   }),
   directives: { track },
   components: {
     HelloWorld, VClork
   },
-  async created() {
-    this.object = await getObject();
-    this.list = await getArray();
+  methods: {
+    async genMockData() {
+      this.object = await getObject();
+      this.pageList = await getArray();
+    }
+  },
+  created() {
+    this.genMockData();
   },
 };

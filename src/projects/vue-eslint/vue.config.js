@@ -13,7 +13,6 @@ module.exports = {
       warnings: true,
       errors: true
     },
-    port: 8080
   },
   chainWebpack: config => (
     config.resolve.alias
