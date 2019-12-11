@@ -1,9 +1,30 @@
+# Feature List
 
 ## todo
-- [x] 新建项目的时候，如果已有文件夹则提示无法创建
-- [x] user select type `inquirer`
 - [ ] add unit test
+- [ ] add vue-admin
+- [ ] sync theme convention
+- [ ] build base scanffold for all projects
+  - [ ] import with npm
+  - [ ] include axios api, ui convention, base ui component library, layout, auth, permission, vue+vuex+vue-router, react+mobx+react-router
+  - [ ] all of these modules have interface to extend
+  - [ ] update by npm pump
+
+## v1.2.3
+- [x] add mockjs to vue-eslint & react-antd
+- [x] fix vue-eslint hot reload
+
+## v1.2.2
+- [x] fix logger of vue-eslint
+
+## 1.2.1
+- [x] vue-eslint: add USAGE.md
+
+## v1.2.0
+- [x] vue-eslint add ui convention, import element-ui
+- [x] 新建项目的时候，如果已有文件夹则提示无法创建
 - [x] add logger plugin
+- [x] user select type `inquirer`
 - [x] if no name; print discription
 - [x] add folder service
 - [x] add some utils

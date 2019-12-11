@@ -64,9 +64,7 @@ javascript node_module package base project
 - unit test: `mocha` + `power-assert` + `sinon` + `nyc`
 - eslint: `airbnb-base`
 
-## Feature List
-### 1.2.1
-- vue-eslint: add USAGE.md
+## development
+<!-- - `npm link`: link to global environment -->
 
-### 1.2.0
-- vue-eslint add ui convention, import element-ui
+## [FEATURE LIST](./TODO.md)

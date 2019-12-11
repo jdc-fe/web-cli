@@ -15,6 +15,14 @@ const formItemLayout = {
 @inject('user')
 @observer
 class Login extends Component {
+  constructor(props) {
+    super(props);
+    const { user: { isLogin } } = props;
+    if (isLogin) {
+      history.replace(PATHS.HOME_PAGE);
+    }
+  }
+
   handleOk = () => {
     const {
       form: { validateFieldsAndScroll },

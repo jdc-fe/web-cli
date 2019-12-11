@@ -9,5 +9,10 @@ export default {
       name: '测试子页面',
       component: () => import('src/views/TestPage')
     },
+    {
+      path: '/test/mock',
+      name: 'mock demo',
+      component: () => import('src/views/Mock')
+    }
   ]
 };

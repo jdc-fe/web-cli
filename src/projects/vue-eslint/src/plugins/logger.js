@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import { DEBUG } from '@/config';
 /**
  * usage
  *  - Vue.$log.[info|warn|error]()
@@ -17,8 +18,7 @@ class Logger {
 
 Vue.use({
   install(V) {
-    const debug = process.env.NODE_ENV !== 'production';
-    const log = new Logger(debug);
+    const log = new Logger(DEBUG);
     V.$log = log;
     V.prototype.$log = log;
   }
