@@ -2,9 +2,16 @@
 
 ## todo
 - [ ] add unit test
+- [ ] add vue-admin
+- [ ] sync theme convention
+- [ ] build base scanffold for all projects
+  - [ ] import with npm
+  - [ ] include axios api, ui convention, base ui component library, layout, auth, permission, vue+vuex+vue-router, react+mobx+react-router
+  - [ ] all of these modules have interface to extend
+  - [ ] update by npm pump
 
 ## v1.1.1
-- [x] add mockjs
+- [x] add mockjs to vue-eslint & react-antd
 - [x] fix vue-eslint hot reload
 
 ## v1.1.0
