@@ -1,0 +1,110 @@
+/* Color 颜色设置区域
+-------------------------- */
+/// color|1|Brand Color|0
+$--color-primary: rgba(22, 177, 154, 1) !default;
+$--color-secondary: #FF8A0F !default;
+/// color|1|Background Color|4
+$--color-white: #FFFFFF !default;
+/// color|1|Background Color|4
+$--color-black: #000000 !default;
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%) !default; /* 53a8ff */
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%) !default; /* 66b1ff */
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%) !default; /* 79bbff */
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%) !default; /* 8cc5ff */
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%) !default; /* a0cfff */
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%) !default; /* b3d8ff */
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%) !default; /* c6e2ff */
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%) !default; /* d9ecff */
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%) !default; /* ecf5ff */
+/// color|1|Functional Color|1
+$--color-success: #67C23A !default;
+/// color|1|Functional Color|1
+$--color-warning: #E6A23C !default;
+/// color|1|Functional Color|1
+$--color-danger: #F56C6C !default;
+/// color|1|Functional Color|1
+$--color-info: #909399 !default;
+
+$--color-success-light: mix($--color-white, $--color-success, 80%) !default;
+$--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
+$--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
+$--color-info-light: mix($--color-white, $--color-info, 80%) !default;
+
+$--color-success-lighter: mix($--color-white, $--color-success, 90%) !default;
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%) !default;
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%) !default;
+$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+/// color|1|Font Color|2
+$--color-text-primary: #303133 !default;
+/// color|1|Font Color|2
+$--color-text-regular: #606266 !default;
+/// color|1|Font Color|2
+$--color-text-secondary: #909399 !default;
+/// color|1|Font Color|2
+$--color-text-placeholder: #C0C4CC !default;
+/// color|1|Border Color|3
+$--border-color-base: #DCDFE6 !default;
+/// color|1|Border Color|3
+$--border-color-light: #E4E7ED !default;
+/// color|1|Border Color|3
+$--border-color-lighter: #EBEEF5 !default;
+/// color|1|Border Color|3
+$--border-color-extra-light: #F2F6FC !default;
+
+// Background
+/// color|1|Background Color|4
+$--background-color-base:#F5F7FA !default;
+
+// 间距
+// 区块间隔定义
+// 大的内容区块之间间距
+$--gutter-content: 24px;
+// 段落间间距
+$--gutter-paragraph: 16px;
+// 行内间距
+$--gutter-line: 8px;
+
+// sidebar
+$--sidebar-width: 256px;
+
+/* Font
+-------------------------- */
+$--font-size-base: 14px !default;
+// $--font-size-small: 10px !default;
+$--font-size-large-1: 16px !default;
+// $--font-size-large-2: 14px !default;
+// $--font-size-large-3: 16px !default;
+// $--font-size-large-4: 18px !default;
+$--font-color-disabled-base: #bbb !default;
+$--font-weight-primary: 500 !default;
+$--font-weight-heavy: 600 !default; // todo 多个weight如何定义？
+$--font-weight-lighter: 400 !default;
+
+/* Main
+--------------------------*/
+$--main-padding: 16px !default;
+$--main-margin: 16px !default;
+
+/* Dialog
+-------------------------- */
+$--dialog-title-font-size: $--font-size-large-1 !default;
+
+/* Border
+-------------------------- */
+$--border-color-base: #DBE0E6 !default;
+$--border-color-light: #e4e7ed !default;
+$--border-color-lighter: #ebeef5 !default;
+$--border-color-extra-light: #f2f6fc !default;
+$--border-width-base: 1Px !default;
+$--border-style-base: solid !default;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base !default;
+$--border-radius-base: 4px !default;
+$--border-radius-large: 8px !default;
+$--border-radius-small: 2px !default;
+// layout/components/Sidebar/index.vue会用到，需要export出去
+:export {
+  subMenuActiveText: $--color-text-primary;
+  menuText: $--color-text-regular;
+  sideBarBg: $--background-color-base;
+  colorPrimary: $--color-primary;
+}

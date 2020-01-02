@@ -1,0 +1,32 @@
+// table
+.el-table th.is-leaf {
+  background-color: $--background-color-base;
+  text-align: center;
+}
+.el-dialog__header {
+  text-align: left;
+  background-color: $--background-color-base;
+}
+.el-table td .cell {
+  text-align: center;
+}
+.el-date-editor--datetimerange.el-input,
+.el-date-editor--datetimerange.el-input__inner {
+  width: 380px !important;
+}
+.btn {
+  margin-left: 24px;
+}
+// .el-input, .el-input--suffix {
+//   .el-input__2nner {
+//     width: 420px!important;
+//   }
+// }
+// .el-input--small {
+//   .el-input__inner {
+//     width: 146px!important;
+//   }
+// }
+// .el-input-number .el-input__inner {
+//   width: 180px!important;
+// }
