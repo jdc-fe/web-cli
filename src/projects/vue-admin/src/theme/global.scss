@@ -1,0 +1,9 @@
+// 全局样式
+@import './variable';
+
+.bread-crumb {
+  height: 24px;
+  line-height: 24px!important;
+  background-color: $--background-color-base;
+  padding: 8px $--main-padding;
+}

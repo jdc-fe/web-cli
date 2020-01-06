@@ -1,0 +1,107 @@
+
+@import 'variable';
+
+.login-container {
+  min-height: 100%;
+  width: 100%;
+  background-color: $--color-primary;
+  overflow: hidden;
+  text-align: left !important;
+
+  img {
+    position: absolute;
+    width: 140px;
+    height: 42px;
+    right: -188px;
+    top: -1px;
+    border-radius: 4px;
+    overflow: hidden;
+    border:1px solid $--border-color-base;
+  }
+
+  .el-input {
+    display: inline-block;
+    height: 40px;
+    width: 85%;
+
+    &.captcha {
+      width: 250px;
+    }
+
+    input {
+      background: transparent;
+      border: 0px;
+      -webkit-appearance: none;
+      border-radius: 0px;
+      color: $--color-text-primary;
+      height: 20px;
+    }
+  }
+  .el-form-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: $--color-text-primary;
+    margin-bottom: $--gutter-content;
+    height: 40px;
+  }
+  .login-form {
+    position: relative;
+    width: 520px;
+    max-width: 100%;
+    padding: 160px 35px 0;
+    margin: 0 auto;
+  }
+
+  .tips {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+
+    span {
+      &:first-of-type {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  .svg-container {
+    padding: 0 0 2px 15px;
+    color: white;
+    vertical-align: middle;
+    width: 25px;
+    display: inline-block;
+  }
+
+  .title-container {
+    position: relative;
+
+    .title {
+      font-size: 26px;
+      color: white;
+      margin: 0px auto 32px auto;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .show-pwd {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    color: $--color-white;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .vertifi-code{
+    width: 328px;
+  }
+
+  .login-submit {
+    border: 1px solid $--background-color-base;
+    background: $--color-white;
+    color: $--color-primary;
+    margin-top: $--gutter-content;
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="18px" viewBox="0 0 16 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>icon_用户名</title>
+    <desc>Created with Sketch.</desc>
+    <g id="后台" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.87">
+        <g id="登录界面" transform="translate(-508.000000, -329.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="icon_用户名" transform="translate(508.000000, 329.000000)">
+                <path d="M14.9111121,18 C14.2741347,18 1.7247022,18 1.08887967,18 C0.453057141,18 0,17.4971271 0,16.8750006 C0,13.836391 1.70280933,11.203875 4.28411505,9.8898708 C3.04471342,8.85825291 2.24073648,7.34061696 2.24073648,5.62500689 C2.24073648,2.51888197 4.81973866,0 8,0 C11.18141,0 13.7592635,2.51888197 13.7592635,5.62500689 C13.7592635,7.34062497 12.9564209,8.85826894 11.7158849,9.8898708 C14.2971845,11.203871 16,13.836371 16,16.8750006 C16,17.4971292 15.5480875,18 14.9111121,18 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
