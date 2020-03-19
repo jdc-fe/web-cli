@@ -44,16 +44,14 @@ class Sidebar extends Component {
     path, icon, name,
   }) => (
     <MenuItem key={path}>
-      {
-        <Link to={path}>
-          {
+      <Link to={path}>
+        {
           icon
             ? (<i style={{ fontSize: '14px' }} className={`iconfont ${icon}`}></i>)
             : null
           }
-          <span className={styles['menu-name']}>{name}</span>
-        </Link>
-    }
+        <span className={styles['menu-name']}>{name}</span>
+      </Link>
     </MenuItem>
   );
 

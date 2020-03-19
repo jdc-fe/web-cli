@@ -48,7 +48,7 @@ class Login extends Component {
     return (
       <div className={styles.login}>
         <div className={styles['login-title']}>
-            登录
+          登录
         </div>
         <form className={styles.form}>
           <FormItem {...formItemLayout} label="账号">

@@ -26,7 +26,12 @@ class Mock extends React.Component {
           click me to generator mock data
         </Button>
         <h4>object</h4>
-        <textarea name="object" cols="30" rows="10" value={JSON.stringify(object)}>
+        <textarea
+          name="object"
+          cols="30"
+          rows="10"
+          value={JSON.stringify(object)}
+        >
         </textarea>
         <h4>array</h4>
         <ul>
