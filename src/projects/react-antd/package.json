@@ -80,7 +80,7 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "lodash-webpack-plugin": "^0.11.5",
-    "node-notifier": "^5.2.1",
+    "node-notifier": "^8.0.1",
     "optimize-css-assets-webpack-plugin": "^5.0.0",
     "ora": "^3.0.0",
     "portfinder": "^1.0.17",
